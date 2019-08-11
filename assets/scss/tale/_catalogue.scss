@@ -1,9 +1,10 @@
 .catalogue {
   &-item {
-    border-bottom: 1px solid $grey-2;
+    // border-bottom: 1px solid $grey-2;
     color: $default-color;
     display: block;
-    padding: 2rem 0;
+    // padding: 2rem 0;
+    margin-bottom: 60px;
 
     &:hover .catalogue-line,
     &:focus .catalogue-line {
@@ -28,6 +29,19 @@
     font-size: 2rem;
     font-weight: 700;
     margin: .5rem 0;
+  }
+
+  & span h1 {
+    display:inline;
+  }
+
+  pre > code {
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    padding: 9.5px;
+    display: block;
+    overflow-x: hidden;
+    overflow-x:scroll;
   }
 
   &-line {
