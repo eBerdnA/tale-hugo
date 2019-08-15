@@ -3,12 +3,12 @@
     
     {{- if .Params.Directlink }}
     <span class="">
-        <a href="{{ .Params.Directlink }}" target="_blank"><h1 class="catalogue-title">{{ .Title }}</h1></a>
+        <a href="{{ .Params.Directlink }}" target="_blank"><h1 class="catalogue-title">{{- if .Params.Draft }}[[Draft]]{{- end }}{{ .Title }}</h1></a>
         <a href="{{ .Permalink }}" title="permalink">&#128279;</a>
     </span>
     <br />
     {{- else }}
-    <a href="{{ .Permalink }}" ><h1 class="catalogue-title">{{ .Title }}</h1></a>
+    <a href="{{ .Permalink }}" ><h1 class="catalogue-title">{{- if .Params.Draft }}[[Draft]]{{- end }}{{ .Title }}</h1></a>
     {{- end }}
     <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>
     <p>
