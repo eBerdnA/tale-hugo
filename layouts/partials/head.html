@@ -17,7 +17,7 @@
 		{{ $sass := resources.Get "scss/tale.scss" }}
 		{{ $style := $sass | resources.ToCSS $cssOptions }}
   		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Biryani">
 		{{ range .Site.Params.css -}}
 			<link rel="stylesheet" href="{{ . | relURL }}">
 		{{ end -}}
