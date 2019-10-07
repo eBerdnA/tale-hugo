@@ -12,6 +12,15 @@
     {{- end }}
     <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>
     <p>
-        {{ if isset .Params "summary" }}{{ .Params.Content | markdownify }}{{ else }}{{ .Content }}{{ end }}
+        {{ if .Summary }}
+            {{ .Summary | markdownify | safeHTML }}
+            {{ if .Truncated }}
+                <div>
+                    <p><a href="{{ .Permalink }}">... [Read&nbsp;More]</a></p>
+                </div>
+            {{ end }}
+        {{ else }}
+            <p>{{ .Params.Content | markdownify | safeHTML }}</p>                
+        {{ end }}
     </p>
 </div>
