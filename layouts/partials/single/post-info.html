@@ -8,6 +8,12 @@
 
     {{- if .PublishDate }}
         <br>
-        <span>{{ i18n "on" }}&nbsp;</span><time datetime="{{ .PublishDate }}">{{ i18n "publishdate" . }}</time>
+        <span class="catalogue-time">{{ i18n "published" }}&nbsp;{{ i18n "on" }}&nbsp;</span><time datetime="{{ .PublishDate }}">{{ i18n "publishdate" . }}</time>
+    {{- end }}
+
+    {{- if ne .Lastmod .PublishDate }}
+        <br>
+        <!-- {{ .Params.Update }} -->
+        <span>{{ i18n "updated" }}&nbsp;{{ i18n "on" }}&nbsp;</span><time datetime="{{ .Lastmod }}">{{ i18n "updatedate" . }}</time>
     {{- end }}
 </div>

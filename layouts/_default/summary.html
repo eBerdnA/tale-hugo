@@ -10,7 +10,12 @@
     {{- else }}
     <a href="{{ .Permalink }}" ><h1 class="catalogue-title">{{- if .Params.Draft }}[[Draft]]{{- end }}{{ .Title }}</h1></a>
     {{- end }}
-    <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>
+    <span class="catalogue-time">{{ i18n "published" }}&nbsp;{{ i18n "on" }}&nbsp;</span><time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>
+    {{- if ne .Lastmod .PublishDate}}
+        <br>
+        <!-- {{ .Params.Update }} -->
+        <span class="catalogue-time">{{ i18n "updated" }}&nbsp;{{ i18n "on" }}&nbsp;</span><time datetime="{{ .Lastmod }}" class="catalogue-time">{{ i18n "updatedate" . }}</time>
+    {{- end }}
     <p>
         {{ if .Summary }}
             {{ .Summary | markdownify | safeHTML }}

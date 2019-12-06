@@ -5,13 +5,22 @@ other = "Beiträge"
 other = "Info"
 
 [writtenBy]
-other = "Von"
+other = "von"
 
 [on]
 other = "am"
+
+[published]
+other = "veröffentlicht"
+
+[updated]
+other = "aktualisiert"
 
 [generator]
 other = "Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme."
 
 [publishdate]
-other = "{{ .PublishDate.Day }}. {{ index $.Site.Data.months_de (printf \"%d\" .PublishDate.Month) }} {{ .PublishDate.Year }}"
+other = "{{ .PublishDate.Format \"January 2, 2006 15:04\" }}"
+
+[updatedate]
+other = "{{ .Lastmod.Format \"January 2, 2006 15:04\" }}"
