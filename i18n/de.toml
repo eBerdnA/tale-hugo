@@ -5,7 +5,7 @@ other = "Beiträge"
 other = "Info"
 
 [writtenBy]
-other = "Von"
+other = "von"
 
 [on]
 other = "am"

@@ -5,7 +5,7 @@ other = "Posts"
 other = "About"
 
 [writtenBy]
-other = "Written by"
+other = "written by"
 
 [on]
 other = "on"
