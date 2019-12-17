@@ -1,1 +1,6 @@
-<h1 class="post-title">{{ .Title }}</h1>
+{{- if .Params.Directlink }}
+    <a href="{{ .Params.Directlink }}" target="_blank"><h1 class="post-title" style="display: inline;">{{- if .Params.Draft }}[[Draft]]{{- end }}{{ .Title }}</h1></a>
+    <a href="{{ .Permalink }}" title="permalink">&#128279;</a>
+{{- else }}
+    <h1 class="post-title">{{ .Title }}</h1>
+{{- end }}
