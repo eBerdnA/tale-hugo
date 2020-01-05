@@ -1,8 +1,6 @@
-		<nav class="nav">
-			<div class="nav-container">
-				<a href="{{ "/" | absLangURL }}">
-					<h2 class="nav-title">{{ .Site.Title }}</h2>
-				</a>
-				{{ partial "header-menu.html" . }}
-			</div>
-		</nav>
+<nav class="UnderlineNav UnderlineNav--right px-2">
+	<a class="UnderlineNav-actions muted-link h2" href="{{ .Site.BaseURL }}">
+	  {{ .Site.Title }}
+	</a>
+	{{ partial "header-menu.html" . }}
+</nav>

@@ -1,0 +1,65 @@
+.px-2 {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+}
+
+.px-4 {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+}
+
+.bg-gray {
+    background-color: #f6f8fa !important;
+}
+
+.bg-white {
+    background-color: #fff !important;
+}
+
+.UnderlineNav--right {
+    justify-content: flex-end;
+}
+
+.UnderlineNav--right .UnderlineNav-actions {
+    flex: 1 1 auto;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600 !important;
+}
+
+@media (min-width: 768px) {
+    .h2 {
+        font-size: 24px !important;
+    }
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+a {
+    background-color: transparent;
+}
+
+.muted-link {
+    color: #586069 !important;
+}
+
+.UnderlineNav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+    display: block;
+}
+
+.markdown-body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}

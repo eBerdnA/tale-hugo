@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<main>
+<!-- <main>
 	<div class="post">
 		{{ partial "single/title.html" . }}
 		{{ partial "single/post-info.html" . }}
@@ -22,6 +22,51 @@
 
 		<a href="#" class="top">Top</a>
 	</div>
-</main>
+</main> -->
 
+<!-- Title -->
+<div class="Subhead">
+	<div class="Subhead-heading">
+	  <div class="h1 mt-3 mb-1">{{ .Title }}</div>
+	</div>
+	<div class="Subhead-description">
+  
+	  {{ if ( default true .Params.showDate ) }}
+	  <div class="float-md-right">
+		<span title="Lastmod: {{ .Lastmod.Format "2006-01-02" }}. Published at: {{ .PublishDate.Format "2006-01-02" }}.">
+		  {{ if ne .Lastmod .PublishDate }}
+			Lastmod: {{ dateFormat ( default "2006-01-02" .Site.Params.dateFormat ) .Lastmod }}
+		  {{ else }}
+			Published: {{ dateFormat "2006-01-02" .PublishDate }}
+		  {{ end }}
+		</span>
+	  </div>
+	  {{ end }}
+	</div>
+  </div>
+  <article>
+	<!-- Content -->
+	<section class="pb-6 mb-3 border-bottom">
+	  {{ .Content }}
+	</section>
+  
+	<section>
+	  {{ if (default true .Params.comments) }}
+		{{ template "_internal/disqus.html" . }}
+	  {{ end }}
+	</section>
+  </article>
+
+{{ end }}
+
+{{ define "side" }}
+  {{ if .Params.toc }}
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>{{ .Title }}</b>
+      {{- $toc := .TableOfContents -}}
+      {{- $toc := replaceRE `<nav id="TableOfContents">\n<ul>\n<li>\n<ul>` `<nav id="TableOfContents"><ul>` $toc -}}
+      {{- $toc := replaceRE `</ul>\n</li>\n</ul>\n</nav>` `</ul>\n</nav>` $toc -}}
+      {{- safeHTML $toc -}}
+    </div>
+  {{ end }}
 {{ end }}
