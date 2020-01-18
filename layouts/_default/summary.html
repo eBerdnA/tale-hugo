@@ -1,6 +1,5 @@
 
 <div class="catalogue-item">    
-    
     {{- if .Params.Directlink }}
     <span class="">
         <a href="{{ .Params.Directlink }}" target="_blank"><h1 class="catalogue-title">{{- if .Params.Draft }}[[Draft]]{{- end }}{{ .Title }}</h1></a>
@@ -16,7 +15,7 @@
         <!-- {{ .Params.Update }} -->
         <span class="catalogue-time">{{ i18n "updated" }}&nbsp;{{ i18n "on" }}&nbsp;</span><time datetime="{{ .Lastmod }}" class="catalogue-time">{{ i18n "updatedate" . }}</time>
     {{- end }}
-    <p>
+    <p>        
         {{ if .Summary }}
             {{ .Summary | markdownify | safeHTML }}
             {{ if .Truncated }}
@@ -25,7 +24,7 @@
                 </div>
             {{ end }}
         {{ else }}
-            <p>{{ .Params.Content | markdownify | safeHTML }}</p>                
+            <p>{{ .Content | markdownify | safeHTML }}</p>                
         {{ end }}
     </p>
 </div>
