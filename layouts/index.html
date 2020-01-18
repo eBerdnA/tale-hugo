@@ -4,6 +4,7 @@
 	{{ partial "index/introduction.html" . }}
 
 	<div class="catalogue">
+		<!-- needed change because of https://github.com/gohugoio/hugo/issues/6154-->
 		{{ range (.Paginate (where .Site.RegularPages "Type" "posts")).Pages }}
 			{{ .Render "summary" }}
 		{{ end }}

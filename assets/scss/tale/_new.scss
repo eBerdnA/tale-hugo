@@ -125,3 +125,35 @@ aside {
     display: none;
   }
 }
+
+.UnderlineNav li {
+  transition: all 0.2s ease-out;
+  color: #555;
+  display: inline-block;
+  opacity: .6;
+  padding: 0 2rem 0 0;
+}
+
+.Subhead-heading {
+  color: #353535;
+  display: block;
+  font-family: "Biryani","Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: .5rem 0;
+}
+
+.Subhead-description {
+  color: #aaa;
+  font-family: "Biryani","Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
+  letter-spacing: .5px;
+}
+
+ section.pb-6.mb-3.border-bottom pre>code {
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  padding: 9.5px;
+  display: block;
+  overflow-x: hidden;
+  overflow-x: scroll;
+}
