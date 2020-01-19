@@ -157,3 +157,27 @@ aside {
   overflow-x: hidden;
   overflow-x: scroll;
 }
+
+.catalogue-item > a > h1{
+  font-size: 1.5em;
+}
+
+.catalogue-item > h2{
+  font-size: 1.3em;
+}
+
+.catalogue-time {
+  color: #aaa;
+  letter-spacing: .5px;
+}
+
+.post-divider {
+  width: 50%; 
+  margin: 0 auto; 
+  margin-top: 25px; 
+  margin-bottom: 25px;
+}
+
+.catalogue-item {
+  
+}
