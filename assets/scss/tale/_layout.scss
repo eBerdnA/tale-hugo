@@ -17,6 +17,7 @@ footer,
   box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
   margin-bottom: 20px;
+  display: flex;
 
   &-container {
     margin: 1rem auto;
