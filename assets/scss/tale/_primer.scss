@@ -30,7 +30,11 @@
 
 @media (min-width: 768px) {
     .h2 {
-        font-size: 24px !important;
+        font-size: 24px;
+    }
+    
+    #header > nav > ul.h2 {
+        font-size: 18px;
     }
 }
 
