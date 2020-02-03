@@ -1,10 +1,10 @@
 {{ define "main" }}
 
-<main>
+<div>
 	<div class="post">
 		{{ partial "single/title.html" . }}
 		{{ partial "single/post-info.html" . }}
-		
+		{{ partial "taxonomy.html" . }}
 		{{ partial "single/header.html" . }}
 
 		{{ .Content }}
@@ -22,7 +22,7 @@
 
 		<a href="#" class="top">Top</a>
 	</div>
-</main>
+</div>
 
 {{ end }}
 

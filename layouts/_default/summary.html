@@ -18,12 +18,12 @@
     {{- end }}
     <p>
         {{- if or .Truncated .Params.summary }}
-            {{ .Summary }}
+            {{- .Summary }}
             {{ if .Truncated }}
                 <div>
                     <p><a href="{{ .Permalink }}">... [Read&nbsp;More]</a></p>
                 </div>
-            {{ end }}
+            {{- end }}
         {{- else }}
             <p>{{ .Content }}</p>                
         {{- end }}
