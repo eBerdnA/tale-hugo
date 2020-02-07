@@ -17,15 +17,16 @@
         <span class="catalogue-time">{{ i18n "updated" }}&nbsp;{{ i18n "on" }}&nbsp;</span><time datetime="{{ .Lastmod }}" class="catalogue-time">{{ i18n "updatedate" . }}</time>
     {{- end }}
     <p>
-        {{ if .Summary }}
-            {{ .Summary | markdownify | safeHTML }}
+        {{- if or .Truncated .Params.summary }}
+            {{- .Summary }}
             {{ if .Truncated }}
                 <div>
                     <p><a href="{{ .Permalink }}">... [Read&nbsp;More]</a></p>
                 </div>
-            {{ end }}
-        {{ else }}
-            <p>{{ .Params.Content | markdownify | safeHTML }}</p>                
-        {{ end }}
+            {{- end }}
+        {{- else }}
+            <p>{{ .Content }}</p>                
+        {{- end }}
+    </p>
     </p>
 </div>

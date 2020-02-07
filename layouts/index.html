@@ -1,10 +1,10 @@
 {{ define "main" }}
 
-<main>
+<div>
 	{{ partial "index/introduction.html" . }}
 
 	<div class="catalogue">
-		{{ range (.Paginate (where .Pages "Type" "posts")).Pages }}
+		{{ range (.Paginate (where .Site.RegularPages "Type" "posts")).Pages }}
 			{{ .Render "summary" }}
 		{{ end }}
 	</div>
@@ -19,6 +19,6 @@
 	
 		<span>{{ .Paginator.PageNumber }}</span>
 	</div>
-</main>
+</div>
 
 {{ end }}
