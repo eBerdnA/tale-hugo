@@ -24,3 +24,9 @@ other = "{{ .PublishDate.Format \"January 2, 2006 15:04\" }}"
 
 [updatedate]
 other = "{{ .Lastmod.Format \"January 2, 2006 15:04\" }}"
+
+[contact1]
+other = "Sie haben Fragen oder Anregen bzgl. dieses Posts? Sie können meine Kontaktdaten auf der "
+
+[contact2]
+other = "-Seite finden."
