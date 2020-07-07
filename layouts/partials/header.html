@@ -1,10 +1,12 @@
-<div class="flex-item header-left">	
-	<h2 class="site-logo">
-		<a href="{{ "/" | absLangURL }}">
-				<div class="site-logo-img"><img src="{{ "images/ab-logo.svg" | relURL }}" alt="André Bering Logo" /></div>
-				<div class="site-logo-text">{{ .Site.Title }}</div>
-		</a>
-	</h2>
+<div class="flex-item header-left">
+	<a href="{{ "/" | absLangURL }}">			
+		<div class="site-logo-img">
+			<img src="{{ "images/ab-logo.svg" | relURL }}" alt="André Bering Logo" />
+		</div>
+		<div class="site-logo-text">
+			{{ .Site.Title }}
+		</div>
+	</a>	
 </div>
 <div class="flex-item header-right">
 	<nav>

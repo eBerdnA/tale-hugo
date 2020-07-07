@@ -22,11 +22,6 @@
     }
 }
 
-#header .site-logo-text {
-    // color: yellow;
-    padding-top: 10px;
-}
-
 #header h2 {
     
     @media (max-device-width: 400px) {
@@ -42,14 +37,42 @@
     }
 }
 
-.header-right {
-    height: 100%;
-    vertical-align: middle;
-    margin: 0xp;
-}
-
 .header-right a {
     text-decoration: underline;
+}
+
+.site-logo-text h2 {
+    margin: 0px;
+}
+
+.site-logo-text {
+    @media (max-device-width: 375px) {
+        font-size: 0.9em;
+        line-height: 3.22;
+    }
+    @media (min-device-width: 400px) {
+        font-size: 1.189em;
+        line-height: 2.35;
+    }
+    @media (min-device-width: 401px) {
+        font-size: 1.4em;
+        line-height: 1.97;
+    }
+
+    @media (min-device-width: 769px) {
+        font-size: 1.4em;
+        line-height: 1.95;
+    }
+}
+
+.header-left a {
+    color: #555;
+}
+
+.header-left .site-logo-text,
+.header-left .site-logo-img {
+    display: inline-block;
+    vertical-align: bottom;
 }
 
 nav ul {
@@ -84,22 +107,20 @@ nav ul li a:hover {
     color: #555;
 }
 
-#header .site-logo-img {
-    display: inline-block;
-    vertical-align: middle;
-    margin: auto;
-    margin-right: 10px;
+
+.site-logo-img img{
+    margin-bottom: 0px;
+    padding: 3px;
 
     @media (max-device-width: 400px) {
-        width: 50px;
+        width: 60px;
     }
     
     @media (min-device-width: 401px) {
-        width: 80px;
+        width: 70px;
     }
 
     @media (min-device-width: 769px) {
-        // width: 100px;
-        height: 52px;
+        width: 70px;
     }
 }
