@@ -1,3 +1,4 @@
+{{ .Section }}
 <div class="post-info">
     {{- if or .Params.Author .Site.Params.Author }}
         <span>{{ i18n "writtenBy" }}</span>
@@ -9,8 +10,8 @@
     {{- end }}
 
     {{- if .PublishDate }}
-        <br>
-        <span class="catalogue-time">{{ i18n "published" }}&nbsp;{{ i18n "on" }}&nbsp;</span><time datetime="{{ .PublishDate }}">{{ i18n "publishdate" . }}</time>
+        <br>        
+        <span class="catalogue-time">{{ i18n "published" }}&nbsp;{{ i18n "on" }}&nbsp;</span><time {{ printf "datetime=\"%s\"" (.PublishDate.Format "2006-01-02T15:04:05Z07:00" ) | safeHTMLAttr }}>{{ i18n "publishdate" . }}</time>
     {{- end }}
 
     {{- if ne .Lastmod .PublishDate }}
