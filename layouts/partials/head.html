@@ -18,9 +18,12 @@
 		{{ $style := $sass | resources.ToCSS $cssOptions }}
   		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Biryani">
+		<link rel="stylesheet" href="{{ "syntax.css" | relURL }}">
 		{{ range .Site.Params.css -}}
 			<link rel="stylesheet" href="{{ . | relURL }}">
 		{{ end -}}
+
+		<script src="/js/footnotes.js" type="text/javascript" defer="defer"></script>
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32x32.png" | relURL }}">

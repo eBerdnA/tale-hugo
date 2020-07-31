@@ -1,8 +1,22 @@
-		<nav class="nav">
-			<div class="nav-container">
-				<a href="{{ "/" | absLangURL }}">
-					<h2 class="nav-title">{{ .Site.Title }}</h2>
-				</a>
-				{{ partial "header-menu.html" . }}
-			</div>
-		</nav>
+<div class="flex-item header-left">
+	<a href="{{ "/" | absLangURL }}">			
+		<div class="site-logo-img">
+			<img src="{{ "images/ab-logo.svg" | relURL }}" alt="André Bering Logo" />
+		</div>
+		<div class="site-logo-text">
+			{{ .Site.Title }}
+		</div>
+	</a>	
+</div>
+<div class="flex-item header-right">
+	<nav>
+		<ul>
+			<li>
+				<a href="{{ "about" | absLangURL }}">{{ i18n "about" }}</a>
+			</li>
+			<li>
+				<a href="{{ "/" | absLangURL }}">{{ i18n "posts" }}</a>
+			</li>
+		</ul>
+	</nav>
+</div>

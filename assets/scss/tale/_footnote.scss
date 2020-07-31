@@ -1,0 +1,48 @@
+@keyframes highlight {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.footnotes li,
+.footnote-ref {
+  position: relative;
+}
+
+
+.footnotes li::after,
+.footnote-ref::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      -100deg,
+      rgba(250,232,133,.3),
+      rgba(250,232,133,.6) 95%,
+      rgba(250,232,133,.1));
+  opacity: 0.5;
+}
+
+.footnotes li:target,
+.footnotes li:focus,
+.footnote-ref:target,
+.footnote-ref:focus {
+  animation: highlight 2s cubic-bezier(0.3, 0, 1, 0.7);
+}
+
+.u-hidden-visually {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
